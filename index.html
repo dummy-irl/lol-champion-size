@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A League of Legends champion size comparison game." />
+    <title>LoL Champion Size</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-screen">
+      <header class="game-header">
+        <h1>Size It Up</h1>
+        <p class="intro">League of Legends <small>Edition</small></p>
+      </header>
+
+      <div class="game-layout">
+        <section class="game-board" aria-label="Champion size comparison board">
+          <div class="scale-gutter" aria-label="Meter scale">
+            <div class="meter-labels" id="meter-labels" aria-hidden="true"></div>
+          </div>
+          <figure class="board-character" id="reference-character">
+            <output class="height-tooltip reference-tooltip" id="reference-height-tooltip">
+              <span class="tooltip-name"></span>
+              <span class="tooltip-height"></span>
+            </output>
+          </figure>
+          <figure class="board-character" id="target-character">
+            <output class="height-tooltip target-tooltip" id="height-tooltip">
+              <span class="tooltip-name"></span>
+              <span class="tooltip-height"></span>
+            </output>
+            <img class="champion-image reveal-outline" id="correct-reveal-outline" alt="" aria-hidden="true" />
+            <img class="champion-image reveal-image" id="correct-reveal-image" alt="" aria-hidden="true" />
+          </figure>
+          <div class="ground-line" aria-hidden="true"></div>
+          <div class="zoom-buttons" aria-label="Camera zoom controls">
+            <button id="zoom-in-button" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+            <button id="zoom-out-button" type="button" aria-label="Zoom out" title="Zoom out">−</button>
+          </div>
+        </section>
+        <section class="result-panel" aria-live="polite" aria-labelledby="result-panel-title">
+          <div class="result-panel-content">
+            <h2 id="result-panel-title">Make your guess</h2>
+            <p class="result-empty-state" id="result-empty-state">Resize the target, then lock in to reveal the answer.</p>
+            <div class="result-summary" id="result-summary" hidden>
+              <p class="result-kicker">Accuracy</p>
+              <p class="result-accuracy" id="accuracy-result"></p>
+              <dl class="result-details">
+                <div>
+                  <dt>Your guess</dt>
+                  <dd id="guessed-height"></dd>
+                </div>
+                <div>
+                  <dt>Correct height</dt>
+                  <dd id="correct-height"></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <button class="lock-in-button" type="button">Lock In</button>
+        </section>
+      </div>
+
+    </main>
+
+    <script src="champions.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
