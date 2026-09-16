@@ -6,6 +6,8 @@ canonical physical sizes of League of Legends champions.
 Players compare a reference character with another character and
 resize the target to match its correct proportional size.
 
+Demo: https://dummy-irl.github.io/lol-champion-size/
+
 ## Status
 
 MVP beta. The game is playable with the complete supplied champion roster.
@@ -45,4 +47,3 @@ branch-based Pages deployment may serve LFS pointer files instead of the PNGs.
 
 The site entry point is `index.html`, so no build step is required.
 
-Demo: https://dummy-irl.github.io/lol-champion-size/
